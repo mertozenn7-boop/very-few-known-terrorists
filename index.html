@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>Very Few Known Terrorists</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,22 +90,17 @@ body{
 /* progress hairline */
 #prog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--signal);z-index:60;transition:width .08s linear}
 
-/* ── masthead ──────────────────────────────────────────── */
-.masthead{
-  border-bottom:1px solid var(--rule);
-  padding:.7rem 0;
-  font-family:var(--f-mono);
-  font-size:.68rem;
-  letter-spacing:.09em;
-  text-transform:uppercase;
-  color:var(--muted);
-  display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;align-items:baseline;
+/* ── floating theme control ────────────────────────────── */
+.theme-fab{
+  position:fixed;top:.85rem;right:.85rem;z-index:70;
+  font-family:var(--f-mono);font-size:.6rem;letter-spacing:.11em;text-transform:uppercase;
+  padding:.42rem .7rem;border:1px solid var(--rule);background:var(--surface);color:var(--muted);
+  cursor:pointer;transition:color .15s,border-color .15s;
 }
-.masthead b{color:var(--ink-2);font-weight:500}
-.masthead .sp{margin-left:auto}
+.theme-fab:hover{color:var(--ink);border-color:var(--ink-2)}
 
 /* ── hero ──────────────────────────────────────────────── */
-.hero{padding:3.2rem 0 2.4rem;position:relative}
+.hero{padding:3.6rem 0 2.4rem;position:relative}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 20rem;gap:2.5rem;align-items:end}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:1.8rem}}
 
@@ -352,14 +348,7 @@ footer.foot{
 
 <div class="wrap">
 
-  <header class="masthead">
-    <span><b>Web commentary</b></span>
-    <!-- ▼▼ REPLACE WITH YOUR NAME ▼▼ -->
-    <span>by <b>Your Name</b></span>
-    <span>Individual assignment &middot; 4 pts</span>
-    <span>Collective exploration: <b>From Data Subject to Target</b></span>
-    <span class="sp"><button class="btn ghost" id="theme" style="padding:.28rem .6rem;font-size:.62rem">Theme</button></span>
-  </header>
+  <button class="theme-fab" id="theme">Theme</button>
 
   <div class="hero">
     <div class="hero-grid">
@@ -371,7 +360,7 @@ footer.foot{
           <b>Article under commentary —</b> Verhelst, H.M., Stannat, A.W. &amp; Mecacci, G. (2020).<br>
           &ldquo;Machine Learning Against Terrorism: How Big Data Collection and Analysis<br>Influences the Privacy-Security Dilemma.&rdquo;
           <i>Science and Engineering Ethics</i> 26(6), 2975&ndash;2984.<br>
-          <b>Strand —</b> Machine learning &amp; defence industries: from model to policy to action.
+          <b>Commentary by —</b> Muhammed Mert Ozen
         </div>
       </div>
 
@@ -388,7 +377,7 @@ footer.foot{
       <div class="rail-inner">
         <div class="rail-label">Contents</div>
         <ul class="toc" id="toc">
-          <li><a href="#s1"><i>§1</i>The exploration</a></li>
+          <li><a href="#s1"><i>§1</i>The question</a></li>
           <li><a href="#s2"><i>§2</i>The article</a></li>
           <li><a href="#s3"><i>§3</i>My view</a></li>
           <li><a href="#s4"><i>§4</i>What it lights up</a></li>
@@ -407,12 +396,10 @@ footer.foot{
 
       <!-- ══════════ §1 ══════════ -->
       <section id="s1">
-        <div class="sec-head"><span class="sec-num">§1</span><h2>The exploration this commentary belongs to</h2></div>
+        <div class="sec-head"><span class="sec-num">§1</span><h2>The question behind this commentary</h2></div>
         <div class="sec-rule"></div>
 
-        <p class="lede" data-count>Our collective exploration is called <em>From Data Subject to Target: the platformisation of surveillance capitalism in security governance</em>. Its central question is this: <strong>how does the outsourcing of state surveillance to private firms and government institutions affect civil society?</strong></p>
-
-        <p data-count>We work from three hypotheses. First, that <strong>procurement displaces politics</strong> — when a state buys surveillance capacity rather than building it, legitimacy is written into contracts and non-disclosure agreements rather than statutes. Second, that <strong>the vendor's incentive is throughput, not accuracy</strong>, so error stops being a cost anyone in the loop absorbs. Third, that <strong>civil society is reconstituted as a scored population</strong> whose route of appeal disappears into commercial confidentiality. My strand is the defence industry: how machine learning built for war becomes policy, and then action.</p>
+        <p class="lede" data-count>I am writing inside a wider inquiry, <em>From Data Subject to Target: the platformisation of surveillance capitalism in security governance</em>, whose central question is this: <strong>how does the outsourcing of state surveillance to private firms and government institutions affect civil society?</strong> My own strand is the defence industry — how machine learning built for war becomes policy, and then action.</p>
       </section>
 
       <!-- ══════════ §2 ══════════ -->
@@ -522,7 +509,7 @@ footer.foot{
           <cite>&mdash; on SKYNET, and on what an ethics paper leaves out</cite>
         </div>
 
-        <p data-count>A paper on machine learning against terrorism that never names the deployed case leaves its strongest evidence on the table, and keeps the argument comfortably hypothetical. Our collective title names the stake it declines: this is where a data subject becomes a target.</p>
+        <p data-count>A paper on machine learning against terrorism that never names the deployed case leaves its strongest evidence on the table, and keeps the argument comfortably hypothetical. The stake it declines to name is the one I care about most: this is where a data subject becomes a target.</p>
 
         <!-- FIGURE 3 -->
         <figure class="fig" id="fig3">
@@ -550,7 +537,7 @@ footer.foot{
         <div class="sec-head"><span class="sec-num">§4</span><h2>What it lights up: the loophole is not a bug, it is the business model</h2></div>
         <div class="sec-rule"></div>
 
-        <p data-count>Read from our exploration, the paper's most durable finding is the one it treats as an afterthought. Feigenbaum and Koenig's definitional instability is not a drafting error to be closed by, as the authors put it, &ldquo;a solid legal framework.&rdquo; It is the arbitrage surface the market is built on. The Office of the Director of National Intelligence's own report, declassified in June 2023 after Senator Ron Wyden pressed for it, found that US agencies buy commercially available information in volume and cannot fully account for what they hold. <strong>What a warrant would have to justify, a purchase order does not.</strong></p>
+        <p data-count>Read against the outsourcing of security, the paper's most durable finding is the one it treats as an afterthought. Feigenbaum and Koenig's definitional instability is not a drafting error to be closed by, as the authors put it, &ldquo;a solid legal framework.&rdquo; It is the arbitrage surface the market is built on. The Office of the Director of National Intelligence's own report, declassified in June 2023 after Senator Ron Wyden pressed for it, found that US agencies buy commercially available information in volume and cannot fully account for what they hold. <strong>What a warrant would have to justify, a purchase order does not.</strong></p>
 
         <!-- FIGURE 4 -->
         <figure class="fig" id="fig4">
@@ -633,7 +620,7 @@ footer.foot{
 
         <p data-count>The Dutch courts had already found the other route. Five months before this paper appeared, in the authors' own country, the District Court of The Hague halted <strong>SyRI</strong> on 5 February 2020 — not because its risk scoring was inaccurate, but because it was opaque and disproportionate under Article 8 of the European Convention on Human Rights. The court never needed the mathematics.</p>
 
-        <p data-count>So the article hands our exploration a precise negative result. Its dilemma assumes a sovereign weighing two goods; under Article 2(3) of the EU AI Act, systems used exclusively for military, defence or national security purposes fall outside the regulation altogether. The balancing has been contracted out — and the data subject learns they were a target only from the consequence.</p>
+        <p data-count>So the article leaves me with a precise negative result. Its dilemma assumes a sovereign weighing two goods; under Article 2(3) of the EU AI Act, systems used exclusively for military, defence or national security purposes fall outside the regulation altogether. The balancing has been contracted out — and the data subject learns they were a target only from the consequence.</p>
       </section>
 
     </main>
@@ -661,10 +648,7 @@ footer.foot{
   </section>
 
   <footer class="foot">
-    <!-- ▼▼ REPLACE WITH YOUR NAME ▼▼ -->
-    <span>Individual web commentary &middot; Your Name &middot; submitted 07/09</span>
-    <span>Figures 1&ndash;4 and the sonification are original work built for this page.</span>
-    <span>Set in Zilla Slab, Source Serif 4 &amp; IBM Plex Mono.</span>
+    <span>Muhammed Mert Ozen</span>
   </footer>
 </div>
 

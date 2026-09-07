@@ -4,7 +4,7 @@ An individual **web commentary** on:
 
 > Verhelst, H.M., Stannat, A.W. & Mecacci, G. (2020). *Machine Learning Against Terrorism: How Big Data Collection and Analysis Influences the Privacy-Security Dilemma.* **Science and Engineering Ethics** 26(6), 2975–2984. [doi:10.1007/s11948-020-00254-w](https://pmc.ncbi.nlm.nih.gov/articles/PMC7755624/)
 
-Written for the collective digital exploration **“From Data Subject to Target: the platformisation of surveillance capitalism in security governance”**, strand: *machine learning & defence industries*.
+Written inside the collective digital exploration **“From Data Subject to Target: the platformisation of surveillance capitalism in security governance”**, strand: *machine learning & defence industries*.
 
 ## The argument
 
@@ -20,12 +20,12 @@ It also supplies the case the paper omits: **NSA SKYNET**, where the same three 
 
 | § | Requirement | Section |
 |---|---|---|
-| 1 | Topic, central question, working hypotheses | The exploration this commentary belongs to |
+| 1 | Topic and central question | The question behind this commentary |
 | 2 | Article analysis: field, angle, method, author, arguments | Three failures of a machine |
 | 3 | Point of view on the article | Right about the machine, wrong about the fight |
 | 4 | Light shed on the exploration | The loophole is not a bug |
 
-**Word count: 968** (brief: 700–1,000). A live counter in the page's left rail computes this from the marked paragraphs at load time.
+**Word count: 909** (brief: 700–1,000). A live counter in the page's left rail computes this from the marked paragraphs at load time.
 
 ## Multimedia
 
@@ -38,10 +38,6 @@ All four figures are **original work built for this page** — no stock imagery,
 - **Fig. 4 — Two models of the same system** *(SVG)*. The paper's balance-scale vs. the procurement loop in which error is revenue.
 
 Fully responsive, light/dark themed, keyboard-accessible, and `prefers-reduced-motion` aware.
-
-## Before you publish
-
-Search `index.html` for `Your Name` (two places, both marked with `▼▼`) and replace with your name.
 
 ## Deploy to GitHub Pages
 
