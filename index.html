@@ -202,6 +202,24 @@ h2{
 .body a:hover{color:var(--signal)}
 .q-inline{color:var(--ink-2)}
 
+/* hypothesis block */
+.hyp{
+  max-width:var(--measure);margin:1.5rem 0 .3rem;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+}
+.hyp-item{display:grid;grid-template-columns:6.5rem 1fr;gap:0 1.15rem;padding:1.05rem 0}
+.hyp-item + .hyp-item{border-top:1px dashed var(--rule-soft)}
+.hyp-k{
+  font-family:var(--f-mono);font-size:.61rem;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--signal);padding-top:.34rem;line-height:1.45;
+}
+.hyp-item.counter .hyp-k{color:var(--flag)}
+.hyp-item p{margin:0;font-size:1rem;line-height:1.55;max-width:none}
+@media(max-width:620px){
+  .hyp-item{grid-template-columns:1fr;gap:.4rem}
+  .hyp-k{padding-top:0}
+}
+
 /* pull quote */
 .pull{
   max-width:var(--measure);margin:1.9rem 0;padding:0 0 0 1.3rem;
@@ -399,7 +417,18 @@ footer.foot{
         <div class="sec-head"><span class="sec-num">§1</span><h2>The question behind this commentary</h2></div>
         <div class="sec-rule"></div>
 
-        <p class="lede" data-count>I am writing inside a wider inquiry, <em>From Data Subject to Target: the platformisation of surveillance capitalism in security governance</em>, whose central question is this: <strong>how does the outsourcing of state surveillance to private firms and government institutions affect civil society?</strong> My own strand is the defence industry — how machine learning built for war becomes policy, and then action.</p>
+        <p class="lede" data-count>I am writing inside a wider inquiry, <em>From Data Subject to Target: the platformisation of surveillance capitalism in security governance</em>, whose central question is this: <strong>how does the outsourcing of state surveillance to private firms and government institutions affect civil society?</strong> My strand is the defence industry — how machine learning built for war becomes policy, and then action.</p>
+
+        <div class="hyp">
+          <div class="hyp-item">
+            <div class="hyp-k">Working<br>hypothesis</div>
+            <p data-count>Our working hypothesis is that the growing reliance of states on private technological platforms with regard to data collection expands surveillance beyond traditional state institutions, by connecting security agencies and further blurring the line between the possession and processing of data of civil society.</p>
+          </div>
+          <div class="hyp-item counter">
+            <div class="hyp-k">Counter-<br>hypothesis</div>
+            <p data-count>We further hypothesise a counter-argument: that the utilisation of such platforms may rather reinforce or even strengthen the capacities of state institutions, as they become capable of augmenting the utility and scope of the surveillance of civil society.</p>
+          </div>
+        </div>
       </section>
 
       <!-- ══════════ §2 ══════════ -->
@@ -409,7 +438,7 @@ footer.foot{
 
         <p data-count>&ldquo;Machine Learning Against Terrorism&rdquo; appeared in <em>Science and Engineering Ethics</em> in July 2020. Its field is engineering ethics, and its authorship explains its shape: Verhelst and Stannat, who contributed equally, are applied mathematicians at the Delft Institute of Applied Mathematics, while Mecacci is a philosopher at Radboud's Donders Institute working on meaningful human control of autonomous systems. The method follows: no fieldwork, no new data, but a conceptual paper importing settled results from machine learning theory into a normative debate. Its warrant is technical authority.</p>
 
-        <p data-count>The angle is to intervene in the <strong>privacy&ndash;security dilemma</strong> (Van den Hoven et al. 2012) by attacking the security side of the ledger rather than defending the privacy side. Terror attacks, above all by lone actors, are so various in motive, planning and execution that they leave &ldquo;irregular and isolated&rdquo; digital footprints. Three known problems follow, after L'Heureux et al. (2017): <strong>class imbalance</strong>, since no population dataset comes near a balance of terrorists and non-terrorists; the <strong>curse of dimensionality</strong>, since more features per suspect demand exponentially more data; and <strong>spurious correlations</strong> — they offer shoe size. The result is over- and underfitting, and no way to estimate real-world accuracy in advance. Their illustration: 99.9% accuracy across ten million people still misjudges ten thousand.</p>
+        <p data-count>The angle: intervene in the <strong>privacy&ndash;security dilemma</strong> (Van den Hoven et al. 2012) by attacking the security side of the ledger rather than defending the privacy side. Terror attacks, above all by lone actors, are so various in motive, planning and execution that they leave &ldquo;irregular and isolated&rdquo; digital footprints. Three known problems follow, after L'Heureux et al. (2017): <strong>class imbalance</strong>, since no population dataset comes near a balance of terrorists and non-terrorists; the <strong>curse of dimensionality</strong>, since more features per suspect demand exponentially more data; and <strong>spurious correlations</strong> — they offer shoe size. The result is over- and underfitting, and no way to estimate real-world accuracy in advance. Their illustration: 99.9% accuracy across ten million people still misjudges ten thousand.</p>
 
         <p data-count>They then dismantle the metadata defence twice over. Machine learning already infers content from metadata — credit-card and antenna records (de Montjoye et al. 2013, 2015), call logs revealing firearm ownership and health conditions (Mayer et al. 2016), de-anonymised film ratings (Narayanan and Shmatikov 2008). And following Feigenbaum and Koenig (2014), there is no rigorous boundary anyway: an IP address is metadata to an email client and data to a router. The paper closes by warning policymakers that &ldquo;technological hype might lead to over-adoption.&rdquo;</p>
 
@@ -464,7 +493,7 @@ footer.foot{
 
         <p data-count>I accept the mathematics and distrust the strategy.</p>
 
-        <p data-count>An efficacy critique is a wasting asset. By arguing that mass surveillance <em>does not work</em>, the paper concedes it would be worth its privacy cost if it did — handing the expiry date of its own argument to the firms it means to restrain. The authors also undersell what they hold. Their ten-thousand-errors example measures error as a volume; the sharper figure is <strong>precision</strong>. At a hundred attackers among ten million people, a 99.9% classifier returns some ten thousand one hundred flags, about a hundred of them real: under one percent. That is not an engineering deficit awaiting a better model. It is arithmetic about rare events, and it does not improve.</p>
+        <p data-count>An efficacy critique is a wasting asset. By arguing that mass surveillance <em>does not work</em>, the paper concedes it would be worth its privacy cost if it did — handing the expiry date of its own argument to the firms it means to restrain. The authors also undersell what they hold. Their ten-thousand-errors example measures error as a volume; the sharper figure is <strong>precision</strong>. At a hundred attackers among ten million people, a 99.9% classifier returns some 10,100 flags, about a hundred of them real: under one percent. That is not an engineering deficit awaiting a better model. It is arithmetic about rare events, and it does not improve.</p>
 
         <!-- FIGURE 2 -->
         <figure class="fig" id="fig2">
@@ -509,7 +538,7 @@ footer.foot{
           <cite>&mdash; on SKYNET, and on what an ethics paper leaves out</cite>
         </div>
 
-        <p data-count>A paper on machine learning against terrorism that never names the deployed case leaves its strongest evidence on the table, and keeps the argument comfortably hypothetical. The stake it declines to name is the one I care about most: this is where a data subject becomes a target.</p>
+        <p data-count>A paper on machine learning against terrorism that never names the deployed case keeps its argument comfortably hypothetical. The stake it declines to name is the one I care about most: this is where a data subject becomes a target.</p>
 
         <!-- FIGURE 3 -->
         <figure class="fig" id="fig3">
@@ -537,7 +566,7 @@ footer.foot{
         <div class="sec-head"><span class="sec-num">§4</span><h2>What it lights up: the loophole is not a bug, it is the business model</h2></div>
         <div class="sec-rule"></div>
 
-        <p data-count>Read against the outsourcing of security, the paper's most durable finding is the one it treats as an afterthought. Feigenbaum and Koenig's definitional instability is not a drafting error to be closed by, as the authors put it, &ldquo;a solid legal framework.&rdquo; It is the arbitrage surface the market is built on. The Office of the Director of National Intelligence's own report, declassified in June 2023 after Senator Ron Wyden pressed for it, found that US agencies buy commercially available information in volume and cannot fully account for what they hold. <strong>What a warrant would have to justify, a purchase order does not.</strong></p>
+        <p data-count>Read against the outsourcing of security, the paper's most durable finding is the one it treats as an afterthought. Feigenbaum and Koenig's definitional instability is not a drafting error to be closed by, as the authors put it, &ldquo;a solid legal framework.&rdquo; It is the arbitrage surface the market is built on. The Office of the Director of National Intelligence's own report, declassified in June 2023 at Senator Ron Wyden's request, found that US agencies buy commercially available information in volume and cannot fully account for it. <strong>What a warrant would have to justify, a purchase order does not.</strong></p>
 
         <!-- FIGURE 4 -->
         <figure class="fig" id="fig4">
@@ -618,9 +647,9 @@ footer.foot{
 
         <p data-count>That is also where the paper's three failure modes invert. Verhelst et al. treat inaccuracy as an &ldquo;opportunity cost related to human supervision.&rdquo; In a platformised market that supervision is a revenue line: false positives become leads, leads justify seats, seats renew contracts. Nobody in the loop experiences the error as a cost — which is why an efficacy critique cannot bite. The paper argues to a policymaker who is no longer deciding.</p>
 
-        <p data-count>The Dutch courts had already found the other route. Five months before this paper appeared, in the authors' own country, the District Court of The Hague halted <strong>SyRI</strong> on 5 February 2020 — not because its risk scoring was inaccurate, but because it was opaque and disproportionate under Article 8 of the European Convention on Human Rights. The court never needed the mathematics.</p>
+        <p data-count>The Dutch courts found the other route. Five months before this paper appeared, in the authors' own country, the District Court of The Hague halted <strong>SyRI</strong> on 5 February 2020 — not because its risk scoring was inaccurate, but because it was opaque and disproportionate under Article 8 ECHR. The court never needed the mathematics.</p>
 
-        <p data-count>So the article leaves me with a precise negative result. Its dilemma assumes a sovereign weighing two goods; under Article 2(3) of the EU AI Act, systems used exclusively for military, defence or national security purposes fall outside the regulation altogether. The balancing has been contracted out — and the data subject learns they were a target only from the consequence.</p>
+        <p data-count>So the article leaves me with a precise negative result. Its dilemma assumes a sovereign weighing two goods; under Article 2(3) of the EU AI Act, systems used exclusively for military, defence or national security purposes fall outside it altogether. The balancing has been contracted out — and the data subject learns they were a target only from the consequence.</p>
       </section>
 
     </main>

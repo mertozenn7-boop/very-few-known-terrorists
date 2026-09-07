@@ -20,12 +20,12 @@ It also supplies the case the paper omits: **NSA SKYNET**, where the same three 
 
 | § | Requirement | Section |
 |---|---|---|
-| 1 | Topic and central question | The question behind this commentary |
+| 1 | Topic, central question, working hypotheses | The question behind this commentary |
 | 2 | Article analysis: field, angle, method, author, arguments | Three failures of a machine |
 | 3 | Point of view on the article | Right about the machine, wrong about the fight |
 | 4 | Light shed on the exploration | The loophole is not a bug |
 
-**Word count: 909** (brief: 700–1,000). A live counter in the page's left rail computes this from the marked paragraphs at load time.
+**Word count: 964** (brief: 700–1,000). A live counter in the page's left rail computes this from the marked paragraphs at load time.
 
 ## Multimedia
 
