@@ -157,7 +157,7 @@ h1 .q{color:var(--muted);font-weight:400}
   font-family:var(--f-mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
   color:var(--muted);margin-bottom:.7rem;
 }
-.toc{list-style:none;margin:0 0 1.6rem;padding:0}
+.toc{list-style:none;margin:0;padding:0}
 .toc li{margin-bottom:.15rem}
 .toc a{
   display:block;font-family:var(--f-mono);font-size:.7rem;line-height:1.35;
@@ -168,11 +168,6 @@ h1 .q{color:var(--muted);font-weight:400}
 .toc a.on{color:var(--signal);border-left-color:var(--signal);background:var(--surface)}
 .toc a i{font-style:normal;color:var(--rule);margin-right:.4rem}
 .toc a.on i{color:var(--signal)}
-
-.meter{border-top:1px solid var(--rule);padding-top:.8rem;font-family:var(--f-mono);font-size:.63rem;color:var(--muted);line-height:1.6}
-.meter .big{display:block;font-size:1.5rem;color:var(--ink);font-weight:500;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.meter-bar{height:4px;background:var(--rule-soft);margin:.5rem 0 .45rem;position:relative;overflow:hidden}
-.meter-bar span{position:absolute;inset:0 auto 0 0;background:var(--signal)}
 
 /* sections */
 section{scroll-margin-top:2rem}
@@ -401,12 +396,6 @@ footer.foot{
           <li><a href="#s4"><i>§4</i>What it lights up</a></li>
           <li><a href="#src"><i>§5</i>Sources</a></li>
         </ul>
-        <div class="meter">
-          <span class="big" id="wc">—</span>
-          words of commentary
-          <div class="meter-bar"><span id="wcbar" style="width:0%"></span></div>
-          brief: 700&ndash;1,000
-        </div>
       </div>
     </nav>
 
@@ -695,17 +684,6 @@ footer.foot{
     r.setAttribute("data-theme", dark ? "light" : "dark");
     drawHay(); drawSon();
   });
-
-  /* ── word counter (honours the 700–1,000 brief) ───────── */
-  (function(){
-    var n = 0;
-    document.querySelectorAll("[data-count]").forEach(function(p){
-      n += (p.textContent.trim().match(/[^\s]+/g) || []).length;
-    });
-    document.getElementById("wc").textContent = n.toLocaleString();
-    var pct = Math.max(0, Math.min(100, ((n - 700) / 300) * 100));
-    document.getElementById("wcbar").style.width = pct + "%";
-  })();
 
   /* ── reading progress + active section ────────────────── */
   var prog = document.getElementById("prog");
